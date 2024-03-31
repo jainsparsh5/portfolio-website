@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import ProfilPic from "@/public/ProfilePic.jpg";
+import ProfilePic from "@/public/ProfilePic.jpg";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
@@ -23,7 +23,7 @@ export default function Intro() {
             }}
           >
             <Image
-              src={ProfilPic}
+              src={ProfilePic}
               alt="Profile Picture"
               width="192"
               height="192"
