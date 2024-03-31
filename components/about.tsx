@@ -34,12 +34,12 @@ export default function About() {
       </p>
 
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
+        <span className="italic">When I&apos;m not coding</span>, I enjoy playing
         video games, watching movies, and go to the gym. I also enjoy{" "}
         <span className="font-medium">trading and investing</span>. I currently
         trade in <span className="font-medium"> Futures and Options</span> and I
         am heavily invested in{" "}
-        <span className="font-medium">Cryptocurrencies</span>. I'm also learning
+        <span className="font-medium">Cryptocurrencies</span>. I&apos;m also learning
         how to play the guitar.
       </p>
     </motion.section>
