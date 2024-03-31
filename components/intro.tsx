@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import ProfilePic from '../public/ProfilePic.png';
+import ProfilePic from "../public/ProfilePic.png";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
@@ -58,29 +58,41 @@ export default function Intro() {
         building <span className="italic">sites & apps</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span>.
       </motion.p>
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{delay: 0.1}}
-      className="flex flex-col sm:flex-row items-center justify-center gap-[1.3rem] px-4 text-lg font-medium">
+        transition={{ delay: 0.1 }}
+        className="flex flex-col sm:flex-row items-center justify-center gap-[1.3rem] px-4 text-lg font-medium"
+      >
         <Link
           href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
         >
-          Contact Me Here <BsArrowRight />
+          Contact Me Here{" "}
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
-        <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-200 active:scale-105 transition">
-          Download CV <HiDownload />
-        </a>
+
         <a
-          href=""
-          className="group bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:text-gray-950 hover:bg-gray-200 active:scale-105 transition cursor-pointer border border-black/10"
+          href="/SparshJain.pdf"
+          download
+        >
+          Download CV{" "}
+          <HiDownload className="opacity-60 group-hover:translate-x-[0.5] transition" />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/sparsh-jain-54022319b/"
+          target="_blank"
+          className="group bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 hover:bg-gray-200 active:scale-105 transition cursor-pointer border border-black/10"
         >
           <BsLinkedin />
         </a>
+
         <a
-          href=""
-          className="group bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full"
+          href="https://github.com/jainsparsh5"
+          target="_blank"
+          className="group bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 hover:bg-gray-200 active:scale-105 transition cursor-pointer border border-black/10"
         >
           <FaGithubSquare />
         </a>
