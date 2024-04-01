@@ -3,10 +3,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "./section-heading";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
+  const{ref} = useSectionInView("About");
+
   return (
     <motion.section
+      ref={ref}
       className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
@@ -35,13 +39,13 @@ export default function About() {
       </p>
 
       <p>
-        <span className="italic">When I&apos;m not coding</span>, I enjoy playing
-        video games, watching movies, and go to the gym. I also enjoy{" "}
+        <span className="italic">When I&apos;m not coding</span>, I enjoy
+        playing video games, watching movies, and go to the gym. I also enjoy{" "}
         <span className="font-medium">trading and investing</span>. I currently
         trade in <span className="font-medium"> Futures and Options</span> and I
         am heavily invested in{" "}
-        <span className="font-medium">Cryptocurrencies</span>. I&apos;m also learning
-        how to play the guitar.
+        <span className="font-medium">Cryptocurrencies</span>. I&apos;m also
+        learning how to play the guitar.
       </p>
     </motion.section>
   );

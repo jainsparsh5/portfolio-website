@@ -78,12 +78,12 @@ export const projectsData = [
     linkToProject:"https://google.com"
   },
   {
-    title: "Word Analytics",
+    title: "ChatKaro.com",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+      "A public web app for quick chat on text. It allows you to send messages in real time and also share images.",
+    tags: ["React.js", "Tailwind CSS", "Firebase"],
     imageUrl: wordanalyticsImg,
-    linkToProject:"https://google.com"
+    linkToProject:"https://chat-app-react-firebase-rosy.vercel.app/"
   },
 ] as const;
 
