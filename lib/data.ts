@@ -1,7 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import { LuGraduationCap, LuSchool } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
@@ -35,28 +34,28 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "High School",
+    location: "Jaipur, Rajasthan, India",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I completed my matriculation from Warren Academy School with 9.40 CGPA and my senior secondary from Indian Overseas School with 88.60% marks where I studied Physics, Chemistry and Mathematics",
+    icon: React.createElement(LuSchool),
+    date: "2017-2019",
+  },
+  {
+    title: "Bachelor of Technology",
+    location: "Dharwad, Karnataka, India",
+    description:
+      "Currently in my final year pursuing B.Tech in Computer Science and Engineering from IIIT Dharwad. I learned C, C++, Java, Data Structures, Algorithms, DBMS, SQL, OS, Computer Networks, Web Development, Software Engineering, etc.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2020-2024",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "College Intern",
+    location: "Bangalore, Karnataka, India",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Worked as an Automation Testing Intern at Caterpillar Inc. for 3 months. I automated the testing of a web application using Selenium WebDriver and Java. I also worked on a project to automate the testing of a REST API using Postman.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "June 2023 - Aug 2023",
   },
 ] as const;
 
@@ -67,7 +66,7 @@ export const projectsData = [
       "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
     imageUrl: corpcommentImg,
-    linkToProject:"https://google.com"
+    linkToProject: "https://google.com",
   },
   {
     title: "rmtDev",
@@ -75,7 +74,7 @@ export const projectsData = [
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
     imageUrl: rmtdevImg,
-    linkToProject:"https://google.com"
+    linkToProject: "https://google.com",
   },
   {
     title: "ChatKaro.com",
@@ -83,11 +82,13 @@ export const projectsData = [
       "A public web app for quick chat on text. It allows you to send messages in real time and also share images.",
     tags: ["React.js", "Tailwind CSS", "Firebase"],
     imageUrl: wordanalyticsImg,
-    linkToProject:"https://chat-app-react-firebase-rosy.vercel.app/"
+    linkToProject: "https://chat-app-react-firebase-rosy.vercel.app/",
   },
 ] as const;
 
 export const skillsData = [
+  "C++",
+  "Java",
   "HTML",
   "CSS",
   "JavaScript",
@@ -99,12 +100,10 @@ export const skillsData = [
   "Tailwind",
   "Prisma",
   "MongoDB",
-  "Redux",
+  "Recoil",
   "GraphQL",
-  "Apollo",
   "Express",
   "PostgreSQL",
-  "Python",
-  "Django",
   "Framer Motion",
+  "Selenium",
 ] as const;
