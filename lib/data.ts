@@ -61,20 +61,20 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Sahay",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "Built this project under 36 hrs in Developthon 2022 conducted by Deshpande Startups, Hubli, Karnataka. It is a web app that connects NGOs and volunteers.",
+    tags: ["React", "Tailwind CSS", "NodeJS", "MongoDB"],
     imageUrl: corpcommentImg,
-    linkToProject: "https://google.com",
+    linkToProject: "https://front-end-bnbt.vercel.app/",
   },
   {
-    title: "rmtDev",
+    title: "Rosato",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+      "Food delivery web app where users can order food from our restaurant. It has features like adding items to cart, viewing cart, placing order, etc.",
+    tags: ["ReactJS",  "Next.js", "CSS", "ContextAPI"],
     imageUrl: rmtdevImg,
-    linkToProject: "https://google.com",
+    linkToProject: "https://rosato-m97jhjlc9-jainsparsh5.vercel.app/",
   },
   {
     title: "ChatKaro.com",
