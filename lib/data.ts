@@ -61,28 +61,27 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Sahay",
+    title: "Medium.com",
     description:
-      "Built this project under 36 hrs in Developthon 2022 conducted by Deshpande Startups, Hubli, Karnataka. It is a web app that connects NGOs and volunteers.",
-    tags: ["React", "Tailwind CSS", "NodeJS", "MongoDB"],
+      "The Medium.com Clone, with React and Cloudflare Workers, enables secure sign-in, content creation, and discovery, emphasizing user engagement.",
+    tags: ["React", "Cloudflare Workers", "Typescript", "PostgreSQL", "JWT"],
     imageUrl: corpcommentImg,
-    linkToProject: "https://front-end-bnbt.vercel.app/",
-  },
-  {
-    title: "Rosato",
-    description:
-      "Food delivery web app where users can order food from our restaurant. It has features like adding items to cart, viewing cart, placing order, etc.",
-    tags: ["ReactJS",  "Next.js", "CSS", "ContextAPI"],
-    imageUrl: rmtdevImg,
-    linkToProject: "https://rosato-m97jhjlc9-jainsparsh5.vercel.app/",
+    linkToProject: "https://medium-clone-five-dusky.vercel.app/",
   },
   {
     title: "ChatKaro.com",
     description:
       "A public web app for quick chat on text. It allows you to send messages in real time and also share images.",
-    tags: ["React.js", "Tailwind CSS", "Firebase"],
+    tags: ["React", "Tailwind CSS", "Firebase", "React-Router-Dom", "Context API"],
     imageUrl: wordanalyticsImg,
     linkToProject: "https://chat-app-react-firebase-rosy.vercel.app/",
+  },
+  {
+    title: "Personal Portfolio",
+    description:"A smooth and responsive personal portfolio website built using Next.js and Tailwind CSS. It also uses Framer Motion for animations.",
+    tags: ["NextJS", "Tailwind CSS", "Framer Motion", "Context API", "TypeScript"],
+    imageUrl: rmtdevImg,
+    linkToProject: "https://rosato-m97jhjlc9-jainsparsh5.vercel.app/",
   },
 ] as const;
 
