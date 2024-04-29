@@ -81,7 +81,7 @@ export const projectsData = [
     description:"A smooth and responsive personal portfolio website built using Next.js and Tailwind CSS. It also uses Framer Motion for animations.",
     tags: ["NextJS", "Tailwind CSS", "Framer Motion", "Context API", "TypeScript"],
     imageUrl: rmtdevImg,
-    linkToProject: "https://rosato-m97jhjlc9-jainsparsh5.vercel.app/",
+    linkToProject: "https://portfolio-website-steel-two.vercel.app/",
   },
 ] as const;
 
