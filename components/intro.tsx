@@ -10,10 +10,13 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { FlipWords } from "./ui/flip-words";
 
 export default function Intro() {
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const { ref } = useSectionInView("Home", 0.5);
+
+  const words = ["Full Stack Developer", "Software Engineer", "Automation Tester", "Tech Enthusiast", "NextJS Developer"];
 
   return (
     <section
@@ -62,9 +65,9 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I&apos;m Sparsh.</span> I&apos;m a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
+        <span className="font-bold"><FlipWords className="!text-black" duration={2000} words={words} /></span> with{" "}
         <span className="font-bold">2 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
+        building <span className="italic">websites</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span>.
       </motion.h1>
       <motion.div

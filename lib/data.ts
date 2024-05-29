@@ -62,7 +62,15 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Medium.com",
+    title: "Explora Stays",
+    description:
+      "A full-stack NextJS app for booking homestays. It allows users to search for stays, view details & reserve them. You can also list your homestay to explorafy it.",
+    tags: ["NextJS", "Tailwind CSS", "Prisma", "MongoDB", "Server Actions"],
+    imageUrl: wordanalyticsImg,
+    linkToProject: "https://explora-stays.vercel.app/",
+  },
+  {
+    title: "Blogging Web App",
     description:
       "The Medium.com Clone, with React and Cloudflare Workers, enables secure sign-in, content creation, and discovery, emphasizing user engagement.",
     tags: ["React", "Cloudflare Workers", "Typescript", "PostgreSQL", "JWT"],
@@ -86,7 +94,7 @@ export const projectsData = [
   {
     title: "Personal Portfolio",
     description:
-      "A smooth and responsive personal portfolio website built using Next.js and Tailwind CSS. It also uses Framer Motion for animations.",
+      "A smooth and responsive personal portfolio website built using Next.js and Tailwind CSS. It also uses Framer Motion.",
     tags: [
       "NextJS",
       "Tailwind CSS",
@@ -100,12 +108,25 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "C++",
+  "C/C++",
   "Java",
   "Next.js",
   "TypeScript",
   "React.js",
   "JavaScript",
+  "CI/CD",
+  "Docker",
+  "Kubernetes",
+  "TurboREPO",
+  "Prometheus",
+  "Grafana",
+  "GraphQL",
+  "OpenAPI Specification",
+  "Database Optimization",
+  "Data Structures",
+  "Algorithms",
+  "Cloudflare Workers",
+  "MongoDB",
   "Zod",
   "JWT",
   "SQL",
