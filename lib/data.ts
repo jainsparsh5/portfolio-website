@@ -4,6 +4,7 @@ import { LuGraduationCap, LuSchool } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import exploraStaysSS from "@/public/explora-stays-ss.png";
 
 export const links = [
   {
@@ -65,15 +66,15 @@ export const projectsData = [
     title: "Explora Stays",
     description:
       "A full-stack NextJS app for booking homestays. It allows users to search for stays, view details & reserve them. You can also list your homestay to explorafy it.",
-    tags: ["NextJS", "Tailwind CSS", "Prisma", "MongoDB", "Server Actions"],
-    imageUrl: wordanalyticsImg,
+    tags: ["NextJS", "TailwindCSS", "Prisma", "MongoDB", "Server Actions"],
+    imageUrl:exploraStaysSS,
     linkToProject: "https://explora-stays.vercel.app/",
   },
   {
     title: "Blogging Web App",
     description:
-      "The Medium.com Clone, with React and Cloudflare Workers, enables secure sign-in, content creation, and discovery, emphasizing user engagement.",
-    tags: ["React", "Cloudflare Workers", "Typescript", "PostgreSQL", "JWT"],
+      "The Medium.com Clone, with React and Cloudflare Workers, enables secure sign-in, content creation, and discovery of articles.",
+    tags: ["ReactJS", "JWT", "Typescript", "PostgreSQL" , "Serverless"],
     imageUrl: corpcommentImg,
     linkToProject: "https://medium-clone-five-dusky.vercel.app/",
   },
