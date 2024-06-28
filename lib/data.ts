@@ -40,7 +40,7 @@ export const experiencesData = [
     description:
       "Working as an Full Stack Engineer at Urbint, in the worker safety team to build a platform that helps in reducing the risk of accidents for field workers. I work on the backend using FastAPI, GraphQL with Python and Strawberry, PostgreSQL, and the frontend using Next.js, React.js, and Tailwind CSS.",
     icon: React.createElement(CgWorkAlt),
-    date: "June 2023 - Present",
+    date: "June 2024 - Present",
   },
   {
     title: "Intern, Caterpillar Inc.",
