@@ -35,8 +35,16 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Associate Software Engineer, Urbint",
+    location: "Bengaluru, Karnataka, India",
+    description:
+      "Working as an Full Stack Engineer at Urbint, in the worker safety team to build a platform that helps in reducing the risk of accidents for field workers. I work on the backend using FastAPI, GraphQL with Python and Strawberry, PostgreSQL, and the frontend using Next.js, React.js, and Tailwind CSS.",
+    icon: React.createElement(CgWorkAlt),
+    date: "June 2023 - Present",
+  },
+  {
     title: "Intern, Caterpillar Inc.",
-    location: "Bangalore, Karnataka, India",
+    location: "Bengaluru, Karnataka, India",
     description:
       "Worked as an Automation Testing Intern at Caterpillar Inc. for 3 months. I automated the testing of a web application using Selenium WebDriver and Java. I also worked on a project to automate the testing of a REST API using Postman.",
     icon: React.createElement(CgWorkAlt),
@@ -67,14 +75,14 @@ export const projectsData = [
     description:
       "A full-stack NextJS app for booking homestays. It allows users to search for stays, view details & reserve them. You can also list your homestay to explorafy it.",
     tags: ["NextJS", "TailwindCSS", "Prisma", "MongoDB", "Server Actions"],
-    imageUrl:exploraStaysSS,
+    imageUrl: exploraStaysSS,
     linkToProject: "https://explora-stays.vercel.app/",
   },
   {
     title: "Blogging Web App",
     description:
       "The Medium.com Clone, with React and Cloudflare Workers, enables secure sign-in, content creation, and discovery of articles.",
-    tags: ["ReactJS", "JWT", "Typescript", "PostgreSQL" , "Serverless"],
+    tags: ["ReactJS", "JWT", "Typescript", "PostgreSQL", "Serverless"],
     imageUrl: corpcommentImg,
     linkToProject: "https://medium-clone-five-dusky.vercel.app/",
   },
@@ -115,6 +123,10 @@ export const skillsData = [
   "TypeScript",
   "React.js",
   "JavaScript",
+  "Python",
+  "Strawberry GraphQL",
+  "Fast API",
+  "RESTful APIs",
   "CI/CD",
   "Docker",
   "Kubernetes",
