@@ -16,7 +16,7 @@ export default function Intro() {
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const { ref } = useSectionInView("Home", 0.5);
 
-  const words = ["Full Stack Developer", "Software Engineer", "Automation Tester", "Tech Enthusiast", "NextJS Developer"];
+  const words = ["Software Engineer", "NextJS Developer", "Automation Tester"];
 
   return (
     <section
