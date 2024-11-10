@@ -9,12 +9,15 @@ import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
   const { ref } = useSectionInView("Contact");
 
   const form = useRef<any>();
 
   const sendEmail = (e: any) => {
     e.preventDefault();
+    setIsLoading(true);
 
     emailjs
       .sendForm("service_1eza72y", "template_rxyqqci", form.current, {
@@ -22,12 +25,12 @@ export default function Contact() {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
           form.current.reset();
+          setIsLoading(false);
           setIsSubmitted(true);
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          setIsLoading(false);
         }
       );
   };
@@ -64,7 +67,7 @@ export default function Contact() {
           placeholder="Your email"
           name="user_email"
           type="email"
-          disabled={isSubmitted}
+          disabled={isSubmitted || isLoading}
           required
           maxLength={500}
         />
@@ -72,24 +75,36 @@ export default function Contact() {
           className="h-52 w-full my-3 rounded-lg border border-black/10 p-4"
           placeholder="Your message"
           name="message"
-          disabled={isSubmitted}
+          disabled={isSubmitted || isLoading}
           required
           maxLength={1000}
         />
         <button
           type="submit"
           value="Send"
-          disabled={isSubmitted}
+          disabled={isSubmitted || isLoading}
           className={`group flex items-center justify-center gap-2 h-[3rem] w-[8rem] text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 ${
             isSubmitted
               ? "bg-slate-400 hover:bg-slate-400"
               : "bg-gray-800 hover:bg-gray-950"
           }`}
         >
-          {isSubmitted ? 
-            <>Sent <FaRegSmileBeam className="text-l opacity-70 transition-all group-hover:scale-100" /></>
-           : <>Submit <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" /></>
-          }
+          {isLoading ? (
+            <>
+              Sending
+              <div className="h-4 w-4 animate-spin rounded-full border-b-2 border-white" />
+            </>
+          ) : isSubmitted ? (
+            <>
+              Sent{" "}
+              <FaRegSmileBeam className="text-l opacity-70 transition-all group-hover:scale-100" />
+            </>
+          ) : (
+            <>
+              Submit{" "}
+              <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </>
+          )}
         </button>
       </form>
     </motion.section>
