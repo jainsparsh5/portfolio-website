@@ -50,7 +50,7 @@ export default function Contact() {
       viewport={{ once: true }}
     >
       <SectionHeading>Contact Me</SectionHeading>
-      <p className="text-gray-700 -mt-4">
+      <p className="text-gray-700 -mt-4 dark:text-white/80">
         Please contact me directly at{" "}
         <a className="underline" href="mailto:jainsparsh17@gmail.com">
           jainsparsh17@gmail.com
@@ -63,7 +63,7 @@ export default function Contact() {
         onSubmit={sendEmail}
       >
         <input
-          className="h-14 w-full rounded-lg border border-black/10 px-4"
+          className="h-14 w-full rounded-lg border border-black/10 px-4 dark:bg-white/10 dark:border-white/10 dark:text-white dark:placeholder:text-white/60 dark:focus:bg-white/20 transition-all"
           placeholder="Your email"
           name="user_email"
           type="email"
@@ -72,7 +72,7 @@ export default function Contact() {
           maxLength={500}
         />
         <textarea
-          className="h-52 w-full my-3 rounded-lg border border-black/10 p-4"
+          className="h-52 w-full my-3 rounded-lg border border-black/10 p-4 dark:bg-white/10 dark:border-white/10 dark:text-white dark:placeholder:text-white/60 dark:focus:bg-white/20 transition-all"
           placeholder="Your message"
           name="message"
           disabled={isSubmitted || isLoading}
@@ -85,8 +85,8 @@ export default function Contact() {
           disabled={isSubmitted || isLoading}
           className={`group flex items-center justify-center gap-2 h-[3rem] w-[8rem] text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 ${
             isSubmitted
-              ? "bg-slate-400 hover:bg-slate-400"
-              : "bg-gray-800 hover:bg-gray-950"
+              ? "bg-slate-400 hover:bg-slate-400 dark:bg-slate-600 dark:hover:bg-slate-600"
+              : "bg-gray-800 hover:bg-gray-950 dark:bg-white dark:bg-opacity-10 dark:hover:bg-opacity-20"
           }`}
         >
           {isLoading ? (

@@ -34,15 +34,15 @@ export default function Project({
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <CardContainer className="inter-var bg-gray-100 rounded-lg max-w-[55rem] mx-auto border overflow-hidden relative hover:bg-gray-200 transition p-4 sm:p-8">
+      <CardContainer className="inter-var bg-gray-100 rounded-lg max-w-[55rem] mx-auto border overflow-hidden relative hover:bg-gray-200 transition p-4 sm:p-8 dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/10">
         <CardBody className="relative w-full h-auto rounded-xl flex flex-col">
           <div className="flex flex-col h-full">
             <h3 className="text-2xl font-semibold">{title}</h3>
-            <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
+            <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">{description}</p>
             <ul className="flex flex-wrap gap-2 mt-4">
               {tags.map((tag, index) => (
                 <CardItem key={index}>
-                  <li className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full">
+                  <li className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:bg-white/10">
                     {tag}
                   </li>
                 </CardItem>

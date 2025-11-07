@@ -5,3 +5,13 @@
 html{
     --line-color: #e5e7eb;
 }
+
+html.dark {
+    --line-color: #374151;
+}
+
+@layer base {
+  * {
+    @apply transition-colors duration-300;
+  }
+}

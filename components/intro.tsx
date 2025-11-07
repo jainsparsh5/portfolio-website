@@ -41,7 +41,7 @@ export default function Intro() {
               height="192"
               quality="95"
               priority={true}
-              className="h-24 w-24 object-cover shadow-xl rounded-full border-[0.35rem] border-white"
+              className="h-24 w-24 object-cover shadow-xl rounded-full border-[0.35rem] border-white dark:border-gray-800"
             />
           </motion.div>
           <motion.span
@@ -65,7 +65,7 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I&apos;m Sparsh.</span> I&apos;m a{" "}
-        <span className="font-bold"><FlipWords className="!text-black" duration={2000} words={words} /></span> with{" "}
+        <span className="font-bold"><FlipWords className="!text-black dark:!text-white" duration={2000} words={words} /></span> with{" "}
         <span className="font-bold">2 years</span> of experience. I enjoy
         building <span className="italic">websites</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span>.
@@ -89,7 +89,7 @@ export default function Intro() {
         </Link>
 
         <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:text-gray-950 hover:bg-gray-200 active:scale-105 transition cursor-pointer border border-black/10"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:text-gray-950 hover:bg-gray-200 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/90 dark:hover:bg-white/20 dark:border-white/10"
           href="/SparshJainResume2024.pdf"
           download
         >
@@ -100,7 +100,7 @@ export default function Intro() {
         <a
           href="https://www.linkedin.com/in/sparsh-jain-54022319b/"
           target="_blank"
-          className="group bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 hover:bg-gray-200 active:scale-105 transition cursor-pointer border border-black/10"
+          className="group bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 hover:bg-gray-200 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/90 dark:hover:bg-white/20 dark:border-white/10"
         >
           <BsLinkedin />
         </a>
@@ -108,7 +108,7 @@ export default function Intro() {
         <a
           href="https://github.com/jainsparsh5"
           target="_blank"
-          className="group bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 hover:bg-gray-200 active:scale-105 transition cursor-pointer border border-black/10"
+          className="group bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 hover:bg-gray-200 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/90 dark:hover:bg-white/20 dark:border-white/10"
         >
           <FaGithubSquare />
         </a>
