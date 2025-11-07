@@ -16,7 +16,13 @@ export default function Intro() {
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const { ref } = useSectionInView("Home", 0.5);
 
-  const words = ["Software Engineer", "NextJS Developer", "Automation Tester"];
+  const words = [
+    "Software Engineer",
+    "Full-Stack Engineer",
+    "SDET",
+    "Automation Architect",
+    "AI-Driven QA",
+  ];
 
   return (
     <section
@@ -66,9 +72,8 @@ export default function Intro() {
       >
         <span className="font-bold">Hello, I&apos;m Sparsh.</span> I&apos;m a{" "}
         <span className="font-bold"><FlipWords className="!text-black dark:!text-white" duration={2000} words={words} /></span> with{" "}
-        <span className="font-bold">2 years</span> of experience. I enjoy
-        building <span className="italic">websites</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
+        <span className="font-bold">1.5 years</span> of experience. I enjoy
+        building <span className="italic">impactful solutions</span>.
       </motion.h1>
       <motion.div
         initial={{ opacity: 0, y: 100 }}

@@ -35,12 +35,20 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Software Engineer 1, Urbint",
+    location: "Bengaluru, Karnataka, India",
+    description:
+      "Promoted to SE1 and transitioned to the Centre of Excellence (COE) team for exceptional contributions. Architected and delivered an enterprise-grade, multi-device, multi-tenant, multi-environment test automation framework from the ground up using Playwright, independently automating 500+ critical test scenarios and achieving a remarkable 90% reduction in sanity testing cycles. Spearheaded CI/CD integration leveraging GitHub Actions and Docker containerization. Pioneered AI-driven testing workflows by implementing intelligent pre-prompts with Playwright MCP and Cursor AI, significantly accelerating manual QA processes. Secured 4th place in company-wide hackathon by collaborating with a 3-member team to engineer a sophisticated Quality Intelligence Portal—a unified dashboard consolidating GitHub analytics, CodeQL security scans, CI/CD pipeline metrics, and developer performance insights. Integrated real-time automation results, performance benchmarking, and GPT-powered Agentic AI for JIRA-to-test-case traceability. Established quality benchmarking frameworks with gamified leaderboards to drive cross-team excellence.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Jan 2025 - Present",
+  },
+  {
     title: "Associate Software Engineer, Urbint",
     location: "Bengaluru, Karnataka, India",
     description:
-      "Working as an Full Stack Engineer at Urbint, in the worker safety team to build a platform that helps in reducing the risk of accidents for field workers. I am writing the complete framework for automation testing using Playwright and Typescript. On the backend we are using FastAPI, GraphQL with Python and Strawberry, PostgreSQL, and the frontend we are using Next.js, React.js, and Tailwind CSS.",
+      "Served as a Full Stack Engineer on the Worker Safety team, developing mission-critical applications to mitigate field worker accident risks. As the sole QA automation engineer, designed and implemented a comprehensive end-to-end testing framework using Playwright and TypeScript, establishing quality standards across the platform. Contributed to backend development with FastAPI, GraphQL (Python + Strawberry), and PostgreSQL, while building responsive, accessible frontends using Next.js, React.js, and Tailwind CSS. Delivered high-impact features in a fast-paced startup environment while maintaining code quality and test coverage.",
     icon: React.createElement(CgWorkAlt),
-    date: "June 2024 - Present",
+    date: "June 2024 - Dec 2024",
   },
   {
     title: "Intern, Caterpillar Inc.",
