@@ -22,6 +22,7 @@
     "postcss": "8.4.38",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hot-toast": "^2.6.0",
     "react-icons": "^5.0.1",
     "react-intersection-observer": "^9.8.1",
     "react-vertical-timeline-component": "^3.6.0",

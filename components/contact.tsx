@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import SectionHeading from "./section-heading";
 import { FaPaperPlane, FaRegSmileBeam } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -15,8 +16,22 @@ export default function Contact() {
 
   const form = useRef<any>();
 
+  useEffect(() => {
+    const sentCount = parseInt(localStorage.getItem("emailsSent") || "0");
+    if (sentCount >= 1) {
+      setIsSubmitted(true);
+    }
+  }, []);
+
   const sendEmail = (e: any) => {
     e.preventDefault();
+
+    const sentCount = parseInt(localStorage.getItem("emailsSent") || "0");
+    if (sentCount >= 1) {
+      toast.error("You can only send one email.");
+      return;
+    }
+
     setIsLoading(true);
 
     emailjs
@@ -25,11 +40,14 @@ export default function Contact() {
       })
       .then(
         () => {
+          toast.success("Email sent successfully!");
           form.current.reset();
           setIsLoading(false);
           setIsSubmitted(true);
+          localStorage.setItem("emailsSent", (sentCount + 1).toString());
         },
         (error) => {
+          toast.error("Failed to send email.");
           setIsLoading(false);
         }
       );
@@ -82,7 +100,7 @@ export default function Contact() {
         <button
           type="submit"
           value="Send"
-          disabled={isSubmitted || isLoading}
+          disabled={isLoading}
           className={`group flex items-center justify-center gap-2 h-[3rem] w-[8rem] text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 ${
             isSubmitted
               ? "bg-slate-400 hover:bg-slate-400 dark:bg-slate-600 dark:hover:bg-slate-600"
