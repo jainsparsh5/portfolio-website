@@ -11,41 +11,67 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
+      className="mb-28 max-w-[45rem] scroll-mt-28 sm:mb-40"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
       id="about"
     >
       <SectionHeading>About Me</SectionHeading>
-      <p className="mb-3">
-      Associate Software Engineer at Urbint with a Bachelor of Technology degree in{" "}
-      <span className="font-medium">Computer Science and Engineering</span> from
-      IIIT Dharwad. I am skilled in{" "}
-      <span className="font-medium">
-        full-stack web development and problem solving
-      </span>
-      . <span className="italic">My favorite part of programming</span> is the
-      problem-solving aspect. I <span className="underline">love</span> the
-      feeling of finally figuring out a solution to a problem. My core stack
-      is{" "}
-      <span className="font-medium">
-        C++, JavaScript, React, Next.js, Node.js, and MongoDB
-      </span>
-      . I am also familiar with Recoil, postgreSQL, TypeScript and Prisma. 
-      Currently exploring <span className="font-medium">Web3</span> technologies. 
-      I am always looking to learn new technologies and enhance my skills in 
-      software development.
-      </p>
-      <p>
-      <span className="italic">When I&apos;m not coding</span>, I enjoy
-      playing video games, watching movies, and go to the gym. I also enjoy{" "}
-      <span className="font-medium">trading and investing</span>. I currently
-      trade in <span className="font-medium">Futures and Options</span> and I
-      am heavily invested in{" "}
-      <span className="font-medium">Cryptocurrencies</span>. I also play the 
-      guitar.
-    </p>
+      <motion.div
+        className="glass-card rounded-3xl p-8 sm:p-10"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+          delay: 0.1,
+        }}
+        viewport={{ once: true }}
+      >
+        <motion.p 
+          className="mb-4 leading-8 text-gray-700 dark:text-gray-300"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          Associate Software Engineer at Urbint with a Bachelor of Technology degree in{" "}
+          <span className="font-semibold bg-gradient-to-r from-violet-600 to-fuchsia-600 dark:from-violet-400 dark:to-fuchsia-400 bg-clip-text text-transparent">Computer Science and Engineering</span> from
+          IIIT Dharwad. I am skilled in{" "}
+          <span className="font-semibold">
+            full-stack web development and problem solving
+          </span>
+          . <span className="italic">My favorite part of programming</span> is the
+          problem-solving aspect. I <span className="underline decoration-violet-500 decoration-2 underline-offset-4">love</span> the
+          feeling of finally figuring out a solution to a problem. My core stack
+          is{" "}
+          <span className="font-semibold">
+            C++, JavaScript, React, Next.js, Node.js, and MongoDB
+          </span>
+          . I am also familiar with Recoil, postgreSQL, TypeScript and Prisma.
+          Currently exploring <span className="font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent">Web3</span> technologies.
+          I am always looking to learn new technologies and enhance my skills in
+          software development.
+        </motion.p>
+        <motion.p 
+          className="leading-8 text-gray-700 dark:text-gray-300"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <span className="italic">When I&apos;m not coding</span>, I enjoy
+          playing video games, watching movies, and go to the gym. I also enjoy{" "}
+          <span className="font-semibold">trading and investing</span>. I currently
+          trade in <span className="font-semibold">Futures and Options</span> and I
+          am heavily invested in{" "}
+          <span className="font-semibold bg-gradient-to-r from-amber-500 to-orange-500 dark:from-amber-400 dark:to-orange-400 bg-clip-text text-transparent">Cryptocurrencies</span>. I also play the
+          guitar.
+        </motion.p>
+      </motion.div>
     </motion.section>
   );
 }

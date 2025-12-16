@@ -7,12 +7,19 @@ import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 
 const fadeInAnimationVariants = {
-  initial: { opacity: 0, y: 100 },
+  initial: { 
+    opacity: 0, 
+    y: 30,
+    scale: 0.9,
+  },
   animate: (index: number) => ({
     opacity: 1,
     y: 0,
+    scale: 1,
     transition: {
-      duration: 0.3,
+      type: "spring",
+      stiffness: 100,
+      damping: 15,
       delay: 0.03 * index,
     },
   }),
@@ -20,27 +27,39 @@ const fadeInAnimationVariants = {
 
 export default function Skills() {
   const { ref } = useSectionInView("Skills");
+  
   return (
     <section
       id="skills"
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb:40"
+      className="mb-28 max-w-[53rem] scroll-mt-28 sm:mb-40"
     >
       <SectionHeading>My Skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+      <ul className="flex flex-wrap justify-center gap-3 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="bg-white border border-black/[0.1] rounded-xl px-5 py-3 hover:bg-gray-100 transition-colors duration-200 cursor-default dark:bg-white/10 dark:text-white/80 dark:border-white/10 dark:hover:bg-white/20"
+            className="group relative glass-button rounded-xl px-5 py-3 cursor-default overflow-hidden"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{
-              once: true,
-            }}
+            viewport={{ once: true }}
             custom={index}
+            whileHover={{ 
+              scale: 1.05,
+              transition: { duration: 0.2 }
+            }}
           >
-            {skill}
+            <span className="relative z-10 text-gray-800 dark:text-white/90 font-medium">
+              {skill}
+            </span>
+            <motion.div 
+              className="absolute inset-0 bg-gradient-to-r from-violet-500/20 via-purple-500/20 to-fuchsia-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              initial={false}
+            />
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div className="absolute inset-0 bg-gradient-to-r from-violet-500/10 to-fuchsia-500/10 blur-xl" />
+            </div>
           </motion.li>
         ))}
       </ul>

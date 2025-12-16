@@ -1,11 +1,9 @@
 "use client";
 
 import { projectsData } from "@/lib/data";
-import { useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
-import { motion } from "framer-motion";
-import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -22,8 +20,9 @@ export default function Project({
     offset: ["0 1", "1.33 1"],
   });
 
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+  const yProgress = useTransform(scrollYProgress, [0, 1], [50, 0]);
 
   return (
     <motion.div
@@ -31,40 +30,66 @@ export default function Project({
       style={{
         scale: scaleProgress,
         opacity: opacityProgress,
+        y: yProgress,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="group mb-8 sm:mb-12 last:mb-0"
     >
-      <CardContainer className="inter-var bg-gray-100 rounded-lg max-w-[55rem] mx-auto border overflow-hidden relative hover:bg-gray-200 transition p-4 sm:p-8 dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/10">
-        <CardBody className="relative w-full h-auto rounded-xl flex flex-col">
-          <div className="flex flex-col h-full">
-            <h3 className="text-2xl font-semibold">{title}</h3>
-            <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">{description}</p>
-            <ul className="flex flex-wrap gap-2 mt-4">
-              {tags.map((tag, index) => (
-                <CardItem key={index}>
-                  <li className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:bg-white/10">
-                    {tag}
-                  </li>
-                </CardItem>
-              ))}
-            </ul>
-          </div>
-        </CardBody>
+      <div className="glass-card rounded-3xl max-w-[55rem] mx-auto overflow-hidden p-6 sm:p-10 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10 dark:hover:shadow-purple-500/5">
+        <div className="flex flex-col">
+          <motion.h3 
+            className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 dark:from-violet-400 dark:via-purple-400 dark:to-fuchsia-400 bg-clip-text text-transparent"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            {title}
+          </motion.h3>
+          <motion.p 
+            className="mt-3 leading-relaxed text-gray-700 dark:text-white/70 text-lg"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            {description}
+          </motion.p>
+          <motion.ul 
+            className="flex flex-wrap gap-2 mt-5"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            {tags.map((tag, index) => (
+              <li 
+                key={index}
+                className="glass-button px-4 py-1.5 text-sm font-medium uppercase tracking-wider text-gray-700 dark:text-white/80 rounded-full"
+              >
+                {tag}
+              </li>
+            ))}
+          </motion.ul>
+        </div>
 
-        <a 
-          href={linkToProject} 
-          target="_blank" 
-          className="w-full h-72 sm:h-[25rem] relative mt-6 block rounded-lg overflow-hidden"
+        <motion.a
+          href={linkToProject}
+          target="_blank"
+          className="relative w-full h-72 sm:h-[28rem] mt-8 block rounded-2xl overflow-hidden"
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.4 }}
         >
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
           <Image
             src={imageUrl}
-            alt="Project I worked on"
+            alt={title}
             quality={95}
-            className="object-cover object-top shadow-2xl transition group-hover:scale-[1.04]"
+            className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
             fill
           />
-        </a>
-      </CardContainer>
+          <div className="absolute inset-0 border border-white/10 rounded-2xl pointer-events-none" />
+        </motion.a>
+      </div>
     </motion.div>
   );
 }

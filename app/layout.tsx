@@ -23,16 +23,32 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`${inter.className} bg-slate-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-[#0a0a0f] dark:text-gray-50 dark:text-opacity-90 overflow-x-hidden`}
       >
-        <div className="bg-[#eba4a6] absolute top-[-6rem] -z-10 right-[9rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
-        <div className="hidden md:block bg-[#dad6f7] absolute top-[-1rem] -z-10 left-[35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
+        <div className="fixed inset-0 -z-10 overflow-hidden">
+          <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-gradient-to-br from-violet-400/30 via-purple-400/20 to-fuchsia-400/30 blur-[100px] morph-blob gradient-shift dark:from-violet-600/20 dark:via-purple-600/15 dark:to-fuchsia-600/20" />
+          <div className="absolute top-[40%] left-[-15%] w-[500px] h-[500px] rounded-full bg-gradient-to-br from-cyan-400/25 via-blue-400/20 to-indigo-400/25 blur-[100px] morph-blob gradient-shift dark:from-cyan-600/15 dark:via-blue-600/10 dark:to-indigo-600/15" style={{ animationDelay: '-2s' }} />
+          <div className="absolute bottom-[-10%] right-[20%] w-[450px] h-[450px] rounded-full bg-gradient-to-br from-rose-400/20 via-pink-400/15 to-orange-400/20 blur-[100px] morph-blob gradient-shift dark:from-rose-600/10 dark:via-pink-600/08 dark:to-orange-600/10" style={{ animationDelay: '-4s' }} />
+          <div className="absolute top-[60%] right-[40%] w-[300px] h-[300px] rounded-full bg-gradient-to-br from-emerald-400/20 via-teal-400/15 to-cyan-400/20 blur-[80px] morph-blob gradient-shift dark:from-emerald-600/10 dark:via-teal-600/08 dark:to-cyan-600/10" style={{ animationDelay: '-6s' }} />
+        </div>
+        
+        <div className="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.15),transparent)] dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.1),transparent)]" />
         
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
             {children}
-            <Toaster position="top-right" />
+            <Toaster 
+              position="top-right"
+              toastOptions={{
+                style: {
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  backdropFilter: 'blur(20px)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  color: '#fff',
+                },
+              }}
+            />
             <ThemeSwitch />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
