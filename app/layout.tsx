@@ -13,6 +13,9 @@ export const metadata = {
   title: "Sparsh Jain | Personal Portfolio",
   description:
     "Sparsh Jain is a software engineer based in India. He is passionate about building products that make a difference.",
+  icons: {
+    icon: "/ProfilePic.png",
+  },
 };
 
 export default function RootLayout({
@@ -31,14 +34,14 @@ export default function RootLayout({
           <div className="absolute bottom-[-10%] right-[20%] w-[450px] h-[450px] rounded-full bg-gradient-to-br from-rose-400/20 via-pink-400/15 to-orange-400/20 blur-[100px] morph-blob gradient-shift dark:from-rose-600/10 dark:via-pink-600/08 dark:to-orange-600/10" style={{ animationDelay: '-4s' }} />
           <div className="absolute top-[60%] right-[40%] w-[300px] h-[300px] rounded-full bg-gradient-to-br from-emerald-400/20 via-teal-400/15 to-cyan-400/20 blur-[80px] morph-blob gradient-shift dark:from-emerald-600/10 dark:via-teal-600/08 dark:to-cyan-600/10" style={{ animationDelay: '-6s' }} />
         </div>
-        
+
         <div className="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.15),transparent)] dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.1),transparent)]" />
-        
+
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
             {children}
-            <Toaster 
+            <Toaster
               position="top-right"
               toastOptions={{
                 style: {
