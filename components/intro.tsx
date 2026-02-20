@@ -144,7 +144,7 @@ export default function Intro() {
         </Link>
 
         <a
-          className="group glass-button px-7 py-4 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-100 transition-all duration-300 text-gray-800 dark:text-white hover:shadow-lg"
+          className="group glass-button px-7 py-4 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-100 transition-all duration-300 text-gray-800 dark:text-white hover:shadow-lg hover:shadow-blue-500/20"
           href="/SparshJainResume2024.pdf"
           download
         >

@@ -67,6 +67,7 @@ export default function Experience() {
                 fontSize: "1.5rem",
                 boxShadow: "0 0 20px rgba(139, 92, 246, 0.4)",
                 border: "none",
+                color: theme === "light" ? "white" : "white",
               }}
             >
               <h3 className="font-bold text-lg capitalize bg-gradient-to-r from-violet-600 to-fuchsia-600 dark:from-violet-400 dark:to-fuchsia-400 bg-clip-text text-transparent">
