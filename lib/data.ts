@@ -35,12 +35,20 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Software Engineer 1, Itron Inc.",
+    location: "Bengaluru, Karnataka, India",
+    description:
+      "Spearheaded legacy modernization of the Storm Impact application (Emergency Response & Planning), migrating a Django framework to a high-performance React (Vite), TypeScript, and FastAPI architecture. Optimized system performance by transitioning GraphQL to REST APIs, eliminating multi-hop latency. Architected scalable backend services including an event-driven Notification Service utilizing Amazon SQS and an enterprise-grade Document Management System using AWS S3 presigned URLs for secure media retrieval. Directed the architectural shift from Next.js to React SPA to drastically reduce build times and eliminate redundant SSR overhead. Championed a robust Testing Pyramid, achieving 95%+ unit and component coverage with Vitest and >90% E2E UI coverage with Playwright automating 12+ critical flows; accelerated release velocity by 2.5x. Spearheaded product analytics and observability by seamlessly integrating Pendo and Sentry, driving data-informed decisions and rapidly resolving issues in an Agile environment.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Jan 2026 - Present",
+  },
+  {
     title: "Software Engineer 1, Urbint",
     location: "Bengaluru, Karnataka, India",
     description:
       "Promoted to SE1 and transitioned to the Centre of Excellence (COE) team for exceptional contributions. Architected and delivered an enterprise-grade, multi-device, multi-tenant, multi-environment test automation framework from the ground up using Playwright, independently automating 500+ critical test scenarios and achieving a remarkable 90% reduction in sanity testing cycles. Spearheaded CI/CD integration leveraging GitHub Actions and Docker containerization. Pioneered AI-driven testing workflows by implementing intelligent pre-prompts with Playwright MCP and Cursor AI, significantly accelerating manual QA processes. Secured 4th place in company-wide hackathon by collaborating with a 3-member team to engineer a sophisticated Quality Intelligence Portal—a unified dashboard consolidating GitHub analytics, CodeQL security scans, CI/CD pipeline metrics, and developer performance insights. Integrated real-time automation results, performance benchmarking, and GPT-powered Agentic AI for JIRA-to-test-case traceability. Established quality benchmarking frameworks with gamified leaderboards to drive cross-team excellence.",
     icon: React.createElement(CgWorkAlt),
-    date: "Jan 2025 - Present",
+    date: "Jan 2025 - Dec 2025",
   },
   {
     title: "Associate Software Engineer, Urbint",
